@@ -19,7 +19,6 @@ fs.readFile(filePath, 'utf8', (err, data) => {
     return
   }
   console.log('C:/Program Files/QSC/Q-SYS Designer '+myversion+'/Q-Sys Designer.exe');
-  // //spawn(cmd, 'start "Q-SYS Launcher" /D "C:/Program Files/QSC/Q-SYS Designer 9.6" "Q-Sys Designer.exe" '+found[0])
   var child = spawn('C:/Program Files/QSC/Q-SYS Designer '+myversion+'/Q-Sys Designer.exe', ['/c', filePath], { detached: true, stdio: [ 'ignore', 'ignore', 'ignore' ] });
   child.unref();
   handle.disconnect(); 
